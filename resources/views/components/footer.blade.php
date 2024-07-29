@@ -4,7 +4,7 @@
 
     <div class="row justify-content-evenly p-3 p-lg-5 bg-darkgreen">
 
-        <div class="col-7 col-lg-3 mb-4 mb-lg-0">
+        <div class="col-9 col-lg-3 mb-4 mb-lg-0 py-4 py-lg-0">
             <img src="{{asset('img/logo-full-blanco.webp')}}" alt="Logo de Main Street Bucerías" class="w-100">
         </div>
 
@@ -19,7 +19,7 @@
                 <i class="fa-regular fa-envelope"></i> ventas@mainstreetbucerias.com
             </a>
 
-            <a href="#" class="d-block link-light fs-5">
+            <a href="{{route('privacy.policy')}}" class="d-block link-light fs-5">
                 {{__('Aviso de Privacidad')}}
             </a>
             

@@ -33,7 +33,8 @@
         </main>
 
 
-        @include('components.whatsapp-btn')
+        <livewire:whats-app-button />
+
 
         {{-- Footer --}}
         @include('components.footer')

@@ -24,13 +24,48 @@
 
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" wire:navigate>{{__('Estilo de Vida')}}</a>
+                    <li class="nav-item me-0 me-lg-4">
+                        <a class="nav-link" href="{{route('lifestyle')}}" wire:navigate>{{__('Estilo de Vida')}}</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" wire:navigate>{{__('Nosotros')}}</a>
+                    <li class="nav-item me-0 me-lg-4">
+                        <a class="nav-link" href="{{route('about')}}" wire:navigate>{{__('Nosotros')}}</a>
                     </li>
+
+                    @php
+                        $route = Route::currentRouteName();
+                        $lang = app()->getLocale();
+                    @endphp
+
+                    @if ($lang == 'en')
+                        @if($route != 'en.pages.unit' and $route != 'es.livewire.update')
+
+                            <a href="{{$url = route($route, request()->query(), true, 'es')}}" wire:navigate class="d-block align-self-center me-3 link-brown fs-4" title="{{__('Cambiar idioma')}}">
+                                <i class="fa-solid fa-language"></i>
+                            </a>
+                        @else
+
+                            <a class="d-block align-self-center me-3 link-brown fs-4" title="{{__('Cambiar idioma')}}" wire:navigate href="{{$url = route('pages.unit', ['name'=>$unit_name, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'es');}}">
+                                <i class="fa-solid fa-language"></i>
+                            </a>
+
+                        @endif
+
+                    @else
+                        @if($route != 'es.pages.unit' and $route != 'es.livewire.update')
+
+                            <a href="{{$url = route($route, request()->query(), true, 'en')}}" wire:navigate class="d-block align-self-center me-3 link-brown fs-4" title="{{__('Cambiar idioma')}}">
+                                <i class="fa-solid fa-language"></i>
+                            </a>
+
+                        @else
+                            
+                            <a class="d-block align-self-center me-3 link-brown fs-4" title="{{__('Cambiar idioma')}}" wire:navigate href="{{$url = route('pages.unit', ['name'=>$unit_name, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'en');}}">
+                                <i class="fa-solid fa-language"></i>
+                            </a>
+
+                        @endif
+                    @endif
                     
                     <li class="nav-item d-flex justify-content-center d-lg-none">
                         <a href="https://www.facebook.com/C21OceanRealty" target="_blank" rel="noopener noreferrer" class="nav-link me-3 fs-4">
