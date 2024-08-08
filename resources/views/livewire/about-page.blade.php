@@ -13,7 +13,13 @@
         </div>
 
         <div class="col-12 col-lg-5 px-3 px-lg-5 my-5 align-self-center">
-            <img class="w-100 mb-5" src="{{asset('img/somos-tu-mejor-inversion.webp')}}" alt="Somos tu mejor Inversión">
+
+            @if ( app()->getLocale() == 'en' )
+                <img class="w-100 mb-5" src="{{asset('img/we-are-your-best-investment.webp')}}" alt="We are your best investment">
+            @else
+                <img class="w-100 mb-5" src="{{asset('img/somos-tu-mejor-inversion.webp')}}" alt="Somos tu mejor Inversión">
+            @endif
+            
             <p class="fs-5">
                 {{__('Con más de dos décadas de experiencia, lidera el mercado con desarrollos que prometen no solo un retorno seguro, sino también un impacto positivo en la comunidad.')}}
             </p>
@@ -67,12 +73,12 @@
 
             <div class="col-12 col-lg-3 mb-5">
                 <h3>Makare</h3>
-                <p class="fs-5">{{__('20 Departamentos, Bucerías, Nayarit.')}}</p>
+                <p class="fs-5">20 {{__('Apartamentos')}}, Bucerías, Nayarit.</p>
             </div>
 
             <div class="col-12 col-lg-3 mb-5">
                 <h3>Arenka</h3>
-                <p class="fs-5">{{__('12 Departamentos, Bucerías, Nayarit.')}}</p>
+                <p class="fs-5">12 {{__('Apartamentos')}}, Bucerías, Nayarit.</p>
             </div>
 
         </div>

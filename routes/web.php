@@ -1,7 +1,9 @@
 <?php
 
 use App\Livewire\HomePage;
+use App\Livewire\UnitPage;
 use App\Livewire\AboutPage;
+use App\Livewire\SearchPage;
 use App\Livewire\LifestylePage;
 use App\Livewire\PrivacyPolicyPage;
 use Illuminate\Support\Facades\Route;
@@ -25,4 +27,8 @@ Route::localized(function () {
     Route::get(Lang::uri('/sobre-nosotros'), AboutPage::class)->name('about');
 
     Route::get(Lang::uri('/aviso-de-privacidad'), PrivacyPolicyPage::class)->name('privacy.policy');
+
+    Route::get(Lang::uri('/buscar-condominios'), SearchPage::class)->name('search');
+
+    Route::get(Lang::uri('/condominio-en-venta-bucerias/{name}'), UnitPage::class)->name('unit');
 });

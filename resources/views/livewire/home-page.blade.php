@@ -14,7 +14,12 @@
 
         <div class="position-absolute bottom-0 start-0 row justify-content-center w-100 z-3">
             <div class="col-12 col-lg-4 col-xxl-3 text-center">
-                <img src="{{asset('img/el-lugar-para-ti.webp')}}" alt="El lugar para ti" class="w-100 mb-5">
+
+                @if (app()->getLocale() == 'en')
+                    <img src="{{asset('img/the-place-for-you.webp')}}" alt="The place for you" class="w-100 mb-5">  
+                @else
+                    <img src="{{asset('img/el-lugar-para-ti.webp')}}" alt="El lugar para ti" class="w-100 mb-5">
+                @endif
 
                 <a href="#info" class="link-light text-decoration-none mb-5 d-block">
                     <i class="fa-solid fa-circle-chevron-down fa-2x fa-bounce"></i>
@@ -32,16 +37,22 @@
         </div>
 
         <div class="col-12 col-lg-3 align-self-center">
-            <img src="{{asset('img/condominios-en-bucerias.webp')}}" alt="Condominios en Bucerías" class="w-100 mb-4">
+
+            @if (app()->getLocale() == 'en')
+                <img src="{{asset('img/condominiums-in-bucerias.webp')}}" alt="Condominiums in Bucerías" class="w-100 mb-4"> 
+            @else
+                <img src="{{asset('img/condominios-en-bucerias.webp')}}" alt="Condominios en Bucerías" class="w-100 mb-4">
+            @endif
+
             <h1 class="fs-4 mb-4">{{__('Factores que determinarán una plusvalía sin precedentes en los ultimos años.')}}</h1>
             <ul class="fs-5 mb-5">
 
                 <li>
-                    {{__('Remodelación de aeropuerto.')}}
+                    {{__('Remodelación del aeropuerto.')}}
                 </li>
 
                 <li>
-                    {{__('Nuevo autopista a Guadalajara.')}}
+                    {{__('Nueva autopista a Guadalajara.')}}
                 </li>
 
                 <li>
@@ -128,7 +139,12 @@
 
     {{-- Amenidades --}}
     <div class="text-center mb-6">
-        <img src="{{asset('img/viviendo-en-el-paraiso.webp')}}" class="col-10 col-lg-4 col-xxl-3 mb-5" alt="Viviendo en el Paraíso">
+
+        @if (app()->getLocale() == 'en')
+            <img src="{{asset('img/living-in-paradise-amenities.webp')}}" class="col-10 col-lg-4 col-xxl-3 mb-5" alt="Living in Paradise">  
+        @else
+            <img src="{{asset('img/viviendo-en-el-paraiso.webp')}}" class="col-10 col-lg-4 col-xxl-3 mb-5" alt="Viviendo en el Paraíso">
+        @endif
         
         <div class="row justify-content-center">
 

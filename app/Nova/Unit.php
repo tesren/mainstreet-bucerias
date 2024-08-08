@@ -75,7 +75,12 @@ class Unit extends Resource
 
             Text::make('Unidad', 'name')->rules('required', 'max:50')->sortable()->placeholder('Nombre o número de la unidad'),
 
-            Number::make('Piso', 'floor')->rules('required')->min(0)->max(35)->sortable(),
+            Select::make('Vista', 'view')->options([
+                'Vista a la calle' => 'Vista a la calle',
+                'Vista al mar' => 'Vista al mar',
+            ])->displayUsingLabels()->rules('required')->sortable()->filterable(),
+
+            Number::make('Piso', 'floor')->rules('required')->min(0)->max(35)->step(0.5)->sortable(),
 
             Number::make('Precio', 'price')->rules('required')->min(0)->step(0.01)->sortable()
             ->displayUsing(
@@ -100,6 +105,10 @@ class Unit extends Resource
                 'Disponible' => 'success',
                 'Apartada' => 'warning',
             ])->sortable(),
+
+            Number::make('Recámaras', 'bedrooms')->rules('required')->min(0)->max(10)->sortable(),
+            Number::make('Baños', 'bathrooms')->rules('required')->min(0)->max(10)->step(0.5)->sortable(),
+
 
             //BelongsToMany::make('Planes de pago', 'paymentPlans', PaymentPlan::class),
 

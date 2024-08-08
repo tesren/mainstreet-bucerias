@@ -6,16 +6,30 @@
     @endsection
     
     <div class="position-relative mb-6">
-        <picture>
-            <!-- Imagen para pantallas de escritorio -->
-            <source media="(min-width: 768px)" srcset="{{asset('img/lifestyle-desktop.webp')}}">
-          
-            <!-- Imagen para pantallas de teléfono -->
-            <source media="(max-width: 767px)" srcset="{{ asset('/img/lifestyle-mobile.webp') }}">
-          
-            <!-- Fallback para navegadores que no soportan <picture> -->
-            <img src="{{asset('img/lifestyle-desktop.webp')}}" alt="Estilo de vida Bucerías" class="w-100" style="height: 91vh;">
-        </picture>
+        
+        @if ( app()->getLocale() == 'en' )
+            <picture>
+                <!-- Imagen para pantallas de escritorio -->
+                <source media="(min-width: 768px)" srcset="{{asset('img/lifestyle-en-desktop.webp')}}">
+            
+                <!-- Imagen para pantallas de teléfono -->
+                <source media="(max-width: 767px)" srcset="{{ asset('img/lifestyle-en-mobile-min.webp') }}">
+            
+                <!-- Fallback para navegadores que no soportan <picture> -->
+                <img src="{{asset('img/lifestyle-en-desktop.webp')}}" alt="Lifestyle in Bucerías" class="w-100" style="height: 91vh;">
+            </picture>
+        @else
+            <picture>
+                <!-- Imagen para pantallas de escritorio -->
+                <source media="(min-width: 768px)" srcset="{{asset('img/lifestyle-desktop.webp')}}">
+            
+                <!-- Imagen para pantallas de teléfono -->
+                <source media="(max-width: 767px)" srcset="{{ asset('/img/lifestyle-mobile.webp') }}">
+            
+                <!-- Fallback para navegadores que no soportan <picture> -->
+                <img src="{{asset('img/lifestyle-desktop.webp')}}" alt="Estilo de vida Bucerías" class="w-100" style="height: 91vh;">
+            </picture>
+        @endif
 
         <div class="position-absolute bottom-0 start-0 row justify-content-center w-100 z-3">
             <div class="col-12 col-lg-4 col-xxl-3 text-center">
@@ -31,7 +45,11 @@
 
         <img src="{{asset('img/palms-bg.webp')}}" alt="" class="w-100 position-absolute top-0 start-0 z-1" style="mix-blend-mode: multiply;">
 
-        <img src="{{asset('img/tesoro-en-la-riviera.webp')}}" alt="Tesoro en la riviera nayarit" class="col-8 col-lg-3 col-xxl-2 mb-5">
+        @if ( app()->getLocale() == 'en' )
+            <img src="{{asset('img/treasure-on-the-riviera-bucerias.webp')}}" alt="Treasure on the riviera nayarit" class="col-8 col-lg-3 col-xxl-2 mb-5">
+        @else
+            <img src="{{asset('img/tesoro-en-la-riviera.webp')}}" alt="Tesoro en la riviera nayarit" class="col-8 col-lg-3 col-xxl-2 mb-5">
+        @endif
 
         <div class="container position-relative z-2">
             <p class="fs-5 text-start mb-5">

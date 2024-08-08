@@ -27,7 +27,7 @@
         <!-- Page Content -->
         <main class="position-relative">
 
-            @include('components.navbar')
+            <livewire:navbar/>
 
             <div>{{ $slot }}</div>
         </main>
