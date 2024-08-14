@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: EuclidCircularA-SemiBold, 'Euclid Circular A';
+        font-size: 34.04px;
+        font-weight: 600;
+      }
+
+      .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke-width: 0px;
+      }
+
+      .cls-5 {
+        fill: #19ba9b;
+        mix-blend-mode: multiply;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-6 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.09em;
+      }
+    </style>
+  </defs>
+  <g class="cls-2">
+    <g id="Capa_2" data-name="Capa 2">
+      <g id="Marco">
+        <rect class="cls-4" width="1200" height="1200"/>
+      </g>
+      <g id="Formas">
+        <polygon class="cls-5" points="515.56 795.22 795.67 825.89 795.67 970.78 515.56 907.22 515.56 795.22"/>
+        <polygon class="cls-5" points="515.56 851.33 352.89 827.67 352.89 875.33 515.56 907.22 515.56 851.33"/>
+        <polygon class="cls-5" points="515.56 795.22 515.56 685 352.89 674.78 352.89 771.56 515.56 795.22"/>
+        <polygon class="cls-5" points="795.67 825.89 795.67 707.67 515.56 685 515.56 795.22 795.67 825.89"/>
+        <polygon class="cls-5" points="515.56 685 515.56 604.11 795.67 612.93 795.67 707.67 515.56 685"/>
+        <polygon class="cls-5" points="515.56 604.11 352.89 606 352.89 674.78 515.56 685 515.56 604.11"/>
+        <polygon class="cls-5" points="515.56 604.11 515.56 521.33 795.67 521.33 795.67 612.93 515.56 604.11"/>
+        <polygon class="cls-5" points="352.89 606 352.89 529 515.56 521.33 515.56 604.11 352.89 606"/>
+        <polygon class="cls-5" points="795.67 521.33 795.67 432 515.56 442 515.56 521.33 795.67 521.33"/>
+        <polygon class="cls-5" points="352.89 529 352.89 448.67 515.56 442 515.56 521.33 352.89 529"/>
+        <polygon class="cls-5" points="795.67 432 795.67 331.33 515.56 364.67 515.56 442 795.67 432"/>
+        <polygon class="cls-5" points="352.89 448.67 352.89 369 515.56 364.67 515.56 442 352.89 448.67"/>
+        <polygon class="cls-5" points="795.67 331.33 795.67 230 515.56 274.33 515.56 364.67 795.67 331.33"/>
+        <polygon class="cls-5" points="352.89 369 352.89 291.67 515.56 274.33 515.56 364.67 352.89 369"/>
+        <polygon class="cls-5" points="352.89 827.67 352.89 771.56 515.56 795.22 515.56 851.33 352.89 827.67"/>
+      </g>
+      <g id="Textos">
+        <text class="cls-1" transform="translate(415 877.18)"><tspan x="0" y="0">1</tspan><tspan class="cls-8" x="12.53" y="0">.</tspan><tspan x="20.42" y="0">1</tspan></text>
+        <text class="cls-1" transform="translate(397.93 823.51)"><tspan class="cls-3" x="0" y="0">M</tspan><tspan x="29.85" y="0">z 1</tspan></text>
+        <text class="cls-1" transform="translate(626 883)"><tspan x="0" y="0">1.2</tspan></text>
+        <text class="cls-1" transform="translate(415 742.33)"><tspan x="0" y="0">2</tspan><tspan class="cls-6" x="19.5" y="0">.</tspan><tspan x="27.4" y="0">1</tspan></text>
+        <text class="cls-1" transform="translate(626 763.79)"><tspan x="0" y="0">2.2</tspan></text>
+        <text class="cls-1" transform="translate(415 653.32)"><tspan x="0" y="0">3</tspan><tspan class="cls-6" x="20.02" y="0">.</tspan><tspan class="cls-7" x="27.91" y="0">1</tspan></text>
+        <text class="cls-1" transform="translate(415 573.99)"><tspan x="0" y="0">4</tspan><tspan class="cls-8" x="21.68" y="0">.</tspan><tspan x="29.58" y="0">1</tspan></text>
+        <text class="cls-1" transform="translate(415 497.99)"><tspan x="0" y="0">5</tspan><tspan class="cls-6" x="19.47" y="0">.</tspan><tspan class="cls-7" x="27.37" y="0">1</tspan></text>
+        <text class="cls-1" transform="translate(415 419.99)"><tspan x="0" y="0">6</tspan><tspan class="cls-8" x="19.37" y="0">.</tspan><tspan x="27.27" y="0">1</tspan></text>
+        <text class="cls-1" transform="translate(415 336.99)"><tspan class="cls-9" x="0" y="0">7</tspan><tspan class="cls-6" x="15.28" y="0">.</tspan><tspan class="cls-7" x="23.18" y="0">1</tspan></text>
+        <text class="cls-1" transform="translate(626 667.44)"><tspan x="0" y="0">3.2</tspan></text>
+        <text class="cls-1" transform="translate(626 579.78)"><tspan x="0" y="0">4.2</tspan></text>
+        <text class="cls-1" transform="translate(626 494.95)"><tspan x="0" y="0">5.2</tspan></text>
+        <text class="cls-1" transform="translate(626 406.67)"><tspan x="0" y="0">6.2</tspan></text>
+        <text class="cls-1" transform="translate(626 314.33)"><tspan class="cls-9" x="0" y="0">7</tspan><tspan x="15.28" y="0">.2</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

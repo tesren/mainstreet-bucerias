@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\Attributes\On;
+use App\Models\ConstructionUpdate;
 
 class Navbar extends Component
 {

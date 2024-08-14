@@ -27,8 +27,22 @@
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
     
                         <li class="nav-item me-0 me-lg-4">
-                            <a class="nav-link" href="{{route('search')}}" wire:navigate>{{__('Inventario')}}</a>
+                            <a class="nav-link" href="{{route('home')}}" wire:navigate>{{__('Inicio')}}</a>
                         </li>
+
+                        <li class="nav-item me-0 me-lg-4">
+                            <a class="nav-link" href="{{route('inventory')}}" wire:navigate>{{__('Inventario')}}</a>
+                        </li>
+
+                        @php
+                            $const_updates = App\Models\ConstructionUpdate::all();
+                        @endphp
+
+                        @if ( count($const_updates) > 0)
+                            <li class="nav-item me-0 me-lg-4">
+                                <a class="nav-link" href="{{route('construction')}}" wire:navigate>{{__('Avances de Obra')}}</a>
+                            </li>
+                        @endif
     
                         <li class="nav-item me-0 me-lg-4">
                             <a class="nav-link" href="{{route('lifestyle')}}" wire:navigate>{{__('Estilo de Vida')}}</a>

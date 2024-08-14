@@ -11,32 +11,41 @@
 
         <div class="col-12 col-lg-5">
 
-            <div class="fs-4 mb-5">
-                <span class="me-5 fw-bold">{{__('Acceso a Playa')}}</span> <span class="me-5">2 min. <i class="fa-solid fa-person-walking"></i></span> <span>1 min. <i class="fa-solid fa-person-biking"></i></span>
+            <div class="fs-4 mb-5 row">
+                <div class="me-0 fw-bold col-4">{{__('Acceso a Playa')}}</div> 
+                <div class="me-0 col-4">2 min. <i class="fa-solid fa-person-walking"></i></div> 
+                <div class="col-4">1 min. <i class="fa-solid fa-person-biking"></i></div>
             </div>
 
-            <div class="fs-4 mb-5">
-                <span class="me-5 fw-bold">{{__('Corredor Gastronómico')}}</span> <span class="me-5">3 min. <i class="fa-solid fa-person-walking"></i></span> <span>2 min. <i class="fa-solid fa-person-biking"></i></span>
+            <div class="fs-4 mb-5 row">
+                <div class="me-0 fw-bold col-4">{{__('Corredor Gastronómico')}}</div> 
+                <div class="me-0 col-4">3 min. <i class="fa-solid fa-person-walking"></i></div> 
+                <div class="col-4">2 min. <i class="fa-solid fa-person-biking"></i></div>
             </div>
 
-            <div class="fs-4 mb-5">
-                <span class="me-5 fw-bold">{{__('Centro de Bucerías')}}</span> <span class="me-5">4 min. <i class="fa-solid fa-person-walking"></i></span> <span>3 min. <i class="fa-solid fa-person-biking"></i></span>
+            <div class="fs-4 mb-5 row">
+                <div class="me-0 fw-bold col-4">{{__('Centro de Bucerías')}}</div> 
+                <div class="me-0 col-4">4 min. <i class="fa-solid fa-person-walking"></i></div> 
+                <div class="col-4">3 min. <i class="fa-solid fa-person-biking"></i></div>
             </div>
 
         </div>
 
         <div class="col-12 col-lg-5">
 
-            <div class="fs-4 mb-5">
-                <span class="me-5 fw-bold">{{__('Aeropuerto Internacional')}}</span> <span class="me-5">22 min. <i class="fa-solid fa-car-side"></i></span>
+            <div class="fs-4 mb-5 row">
+                <div class="me-5 fw-bold col">{{__('Aeropuerto Internacional')}}</div> 
+                <div class="me-5 col-4">22 min. <i class="fa-solid fa-car-side"></i></div>
             </div>
 
-            <div class="fs-4 mb-5">
-                <span class="me-5 fw-bold">{{__('La Cruz de Huanacaxtle')}}</span> <span class="me-5">12 min. <i class="fa-solid fa-car-side"></i></span>
+            <div class="fs-4 mb-5 row">
+                <div class="me-5 fw-bold col">{{__('La Cruz de Huanacaxtle')}}</div> 
+                <div class="me-5 col-4">12 min. <i class="fa-solid fa-car-side"></i></div>
             </div>
 
-            <div class="fs-4 mb-5">
-                <span class="me-5 fw-bold">{{__('Punta de Mita')}}</span> <span class="me-5">25 min. <i class="fa-solid fa-car-side"></i></span>
+            <div class="fs-4 mb-5 row">
+                <div class="me-5 fw-bold col">{{__('Punta de Mita')}}</div> 
+                <div class="me-5 col-4">25 min. <i class="fa-solid fa-car-side"></i></div>
             </div>
         </div>
 

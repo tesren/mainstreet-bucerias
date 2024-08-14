@@ -56,7 +56,7 @@
                 {{__('Un pintoresco pueblo costero con gran desarrollo ubicado en la Riviera Nayarit, es un destino que combina la belleza natural con la calidez de su gente y una atmósfera relajada pero con muchisimas actividades a tu disposición. Estos son algunos de los puntos más destacables de Bucerías.')}}
             </p>
 
-            <a href="#" class="btn btn-brown fs-5 px-5">{{__('Ver inventario disponible')}}</a>
+            <a href="{{route('inventory')}}" wire:navigate class="btn btn-brown fs-5 px-5">{{__('Ver inventario disponible')}}</a>
 
 
             <div class="row mt-6 text-start">

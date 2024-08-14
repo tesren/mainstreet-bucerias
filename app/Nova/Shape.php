@@ -64,10 +64,7 @@ class Shape extends Resource
             ID::make()->sortable(),
             BelongsTo::make('Unidad', 'unit', Unit::class)->withoutTrashed()->rules('required')->sortable(),
 
-            Number::make('Rect X', 'rect_x')->rules('required')->min(0)->step(0.1)->help('Posición en X del texto del Rectangulo'),
-            Number::make('Rect Y', 'rect_y')->rules('required')->min(0)->step(0.1)->help('Posición en Y del texto del Rectangulo'),
-            Number::make('Ancho', 'width')->rules('required')->min(0)->step(0.1)->help('Ancho del Rectangulo'),
-            Number::make('Altura', 'height')->rules('required')->min(0)->step(0.1)->help('Altura del Rectangulo'),
+            Text::make('Puntos', 'points')->rules('required')->help('Los puntos del polígono'),
 
             Number::make('Texto X', 'text_x')->rules('required')->min(0)->step(0.1)->help('Posición en X del texto del polígono'),
             Number::make('Texto Y', 'text_y')->rules('required')->min(0)->step(0.1)->help('Posición en Y del texto del polígono'),

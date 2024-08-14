@@ -11,12 +11,12 @@ class Shape extends Model
     use HasFactory;
 
     /**
-     * Get the unit associated with the Shape
+     * Get the unit that owns the Shape
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function unit()
     {
-        return $this->hasOne(User::class, 'unit_id');
+        return $this->belongsTo(Unit::class);
     }
 }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: EuclidCircularA-SemiBold, 'Euclid Circular A';
+        font-size: 34.04px;
+        font-weight: 600;
+      }
+
+      .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        fill: #0c8c77;
+        mix-blend-mode: multiply;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-5 {
+        letter-spacing: -.09em;
+      }
+    </style>
+  </defs>
+  <g class="cls-2">
+    <g id="Capa_2" data-name="Capa 2">
+      <g id="Marco">
+        <rect class="cls-3" width="1200" height="1200"/>
+      </g>
+      <g id="Formas">
+        <polygon class="cls-4" points="422.11 849.89 432.33 762.33 619.22 758.11 619.22 849.89 422.11 849.89"/><!-- 2.4 -->
+        <polygon class="cls-4" points="432.33 762.33 441.67 692.41 619.22 680.56 619.22 758.11 432.33 762.33"/><!-- 3.4 -->
+        <polygon class="cls-4" points="852.56 732.78 852.56 639.22 640.56 654.56 640.56 741.89 852.56 732.78"/><!-- 4.3 -->
+        <polygon class="cls-4" points="441.67 692.41 448.56 619.69 619.22 604.33 619.22 680.56 441.67 692.41"/><!-- 4.4 -->
+        <polygon class="cls-4" points="852.56 639.22 852.56 545.33 640.56 567.33 640.56 654.56 852.56 639.22"/><!-- 5.3 -->
+        <polygon class="cls-4" points="448.56 619.69 457.13 547.09 619.22 529.67 619.22 604.33 448.56 619.69"/><!-- 5.4 -->
+        <polygon class="cls-4" points="852.56 545.33 852.56 450.78 640.56 479.67 640.56 567.33 852.56 545.33"/><!-- 6.3 -->
+        <polygon class="cls-4" points="852.56 358.78 852.56 450.78 640.56 479.67 640.56 393 852.56 358.78"/><!-- 7.3 -->
+        <polygon class="cls-4" points="852.56 358.78 852.56 266 640.56 305.67 640.56 393 852.56 358.78"/><!-- 8.3 -->
+        <polygon class="cls-4" points="619.22 529.67 619.22 455.67 463.67 475.33 457.13 547.09 619.22 529.67"/><!-- 6.4 -->
+        <polygon class="cls-4" points="619.22 380 469 404 463.67 475.33 619.22 455.67 619.22 380"/><!-- 7.4 -->
+        <polygon class="cls-4" points="619.22 296 619.22 380 469 404 478 326 619.22 296"/>
+        <polygon class="cls-4" points="852.56 732.78 852.56 829 640.56 829 640.56 741.89 852.56 732.78"/> <!-- 3.3 -->
+        <polygon class="cls-4" points="852.56 829 852.56 920.78 640.56 917.22 640.56 829 852.56 829"/> <!-- 2.3 -->
+      </g>
+      <g id="Textos">
+        <text class="cls-1" transform="translate(723.98 885.56)"><tspan x="0" y="0">2.3</tspan></text>
+        <text class="cls-1" transform="translate(723.98 794.15)"><tspan x="0" y="0">3.3</tspan></text>
+        <text class="cls-1" transform="translate(723.98 704.91)"><tspan x="0" y="0">4.3</tspan></text>
+        <text class="cls-1" transform="translate(723.98 619.69)"><tspan x="0" y="0">5.3</tspan></text>
+        <text class="cls-1" transform="translate(723.98 524.79)"><tspan x="0" y="0">6.3</tspan></text>
+        <text class="cls-1" transform="translate(723.98 427.67)"><tspan class="cls-5" x="0" y="0">7</tspan><tspan x="15.28" y="0">.3</tspan></text>
+        <text class="cls-1" transform="translate(723.98 340.7)"><tspan x="0" y="0">8.3</tspan></text>
+        <text class="cls-1" transform="translate(509.38 808.67)"><tspan x="0" y="0">2.4</tspan></text>
+        <text class="cls-1" transform="translate(517.13 738.51)"><tspan x="0" y="0">3.4</tspan></text>
+        <text class="cls-1" transform="translate(516.29 664.51)"><tspan x="0" y="0">4.4</tspan></text>
+        <text class="cls-1" transform="translate(518.4 591.18)"><tspan x="0" y="0">5.4</tspan></text>
+        <text class="cls-1" transform="translate(518.45 521.18)"><tspan x="0" y="0">6.4</tspan></text>
+        <text class="cls-1" transform="translate(521.49 442.51)"><tspan class="cls-5" x="0" y="0">7</tspan><tspan x="15.28" y="0">.4</tspan></text>
+        <text class="cls-1" transform="translate(519.13 366.53)"><tspan x="0" y="0">8.4</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -13,7 +13,11 @@
         <div class="row justify-content-center position-absolute top-0 start-0 z-3 w-100 h-100">
 
             <div class="col-10 col-lg-3 align-self-center">
-                <img src="{{asset('img/inventario-mira-nuestras-unidades.webp')}}" alt="Inventario, mira nuestras unidades" class="w-100">
+                @if (app()->getLocale() == 'en')
+                    <img src="{{asset('img/inventory-take-a-look.webp')}}" alt="Inventory, take a look at our units" class="w-100">
+                @else
+                    <img src="{{asset('img/inventario-mira-nuestras-unidades.webp')}}" alt="Inventario, mira nuestras unidades" class="w-100">
+                @endif
             </div>
 
         </div>
@@ -49,7 +53,7 @@
                 <div class="col-12 col-lg-5 align-self-center">
                     <div class="mb-3 fs-5">{{__('Selecciona el estilo de inventario que te gustaría ver')}}</div>
 
-                    <a href="#" class="btn btn-outline-brown me-3" wire:navigate><i class="fa-solid fa-image"></i> {{__('Gráfico')}}</a>
+                    <a href="{{route('inventory')}}" class="btn btn-outline-brown me-3" wire:navigate><i class="fa-solid fa-image"></i> {{__('Gráfico')}}</a>
 
                     <a href="{{route('search')}}" class="btn btn-outline-brown" wire:navigate><i class="fa-solid fa-list"></i> {{__('Lista')}}</a>
                 </div>

@@ -109,7 +109,7 @@ class Unit extends Resource
             Number::make('Recámaras', 'bedrooms')->rules('required')->min(0)->max(10)->sortable(),
             Number::make('Baños', 'bathrooms')->rules('required')->min(0)->max(10)->step(0.5)->sortable(),
 
-
+            Boolean::make('Lockoff', 'lockoff')->help('Marque la casilla si esta unidad tiene opción de hacer Lockoff'),
             //BelongsToMany::make('Planes de pago', 'paymentPlans', PaymentPlan::class),
 
             Tag::make('Planes de pago', 'paymentPlans', PaymentPlan::class)->hideFromIndex(),
@@ -175,8 +175,20 @@ class Unit extends Resource
     protected function imgFields()
     {
         return [
-            Image::make('Ubicación en planta', 'location_img_path')->disk('media')->maxWidth(300)->hideFromIndex(),
+            //Image::make('Ubicación en planta', 'location_img_path')->disk('media')->maxWidth(300)->hideFromIndex(),
             Image::make('Planos de la Unidad', 'blueprint_path')->disk('media')->maxWidth(300)->hideFromIndex(),
+            Image::make('Planos Lockoff', 'lockoff_path')->disk('media')->maxWidth(300)->hideFromIndex()
+            ->dependsOn(
+                ['lockoff'],
+                function (Image $field, NovaRequest $request, FormData $formData) {
+                    if ($formData->lockoff == true) {
+                        $field->show()->rules('required');
+                    }
+                    else{
+                        $field->hide();
+                    }
+                }
+            ),
             Images::make('Galería', 'gallery')->hideFromIndex()->enableExistingMedia(),
 
         ];

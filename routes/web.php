@@ -4,7 +4,9 @@ use App\Livewire\HomePage;
 use App\Livewire\UnitPage;
 use App\Livewire\AboutPage;
 use App\Livewire\SearchPage;
+use App\Livewire\InventoryPage;
 use App\Livewire\LifestylePage;
+use App\Livewire\ConstructionPage;
 use App\Livewire\PrivacyPolicyPage;
 use Illuminate\Support\Facades\Route;
 
@@ -30,5 +32,14 @@ Route::localized(function () {
 
     Route::get(Lang::uri('/buscar-condominios'), SearchPage::class)->name('search');
 
-    Route::get(Lang::uri('/condominio-en-venta-bucerias/{name}'), UnitPage::class)->name('unit');
+    Route::get(Lang::uri('/inventario-condominios'), InventoryPage::class)->name('inventory');
+
+    Route::get(Lang::uri('/avances-de-obra'), ConstructionPage::class)->name('construction');
+
+    Route::get(Lang::uri('/condominio-en-venta-bucerias').'/{name}', UnitPage::class)->name('unit');
+
+    Livewire::setUpdateRoute(function ($handle) {
+        return Route::post('/livewire/update', $handle);
+    });
+
 });

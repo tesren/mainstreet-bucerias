@@ -19,3 +19,4 @@ yarn-error.log
 /.vscode
 /public/media
 /public/vendor
+.DS_Store

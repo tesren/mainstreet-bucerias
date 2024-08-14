@@ -11,15 +11,15 @@
         <div class="col-12 col-lg-3 mb-4 mb-lg-0">
             <div class="fs-4 mb-4">{{__('Contacto')}}</div>
 
-            <a href="tel:+52" class="d-block link-light fs-5 text-decoration-none mb-3">
-                <i class="fa-solid fa-phone"></i> 322 555 5555
+            <a href="tel:+523221805380" class="d-block link-light fs-5 text-decoration-none mb-3">
+                <i class="fa-solid fa-phone"></i> 322 180 5380
             </a>
 
             <a href="mailto:ventas@mainstreetbucerias.com" class="d-block link-light fs-5 text-decoration-none mb-3">
                 <i class="fa-regular fa-envelope"></i> ventas@mainstreetbucerias.com
             </a>
 
-            <a href="{{route('privacy.policy')}}" class="d-block link-light fs-5">
+            <a href="{{route('privacy.policy')}}" wire:navigate class="d-block link-light fs-5">
                 {{__('Aviso de Privacidad')}}
             </a>
             
