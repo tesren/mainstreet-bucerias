@@ -14,6 +14,10 @@ window.bootstrap = bootstrap;
 
 import { Fancybox } from "@fancyapps/ui";
 window.Fancybox = Fancybox;
+
+import AOS from 'aos';
+window.AOS = AOS;
+
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

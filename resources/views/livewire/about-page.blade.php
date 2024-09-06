@@ -27,11 +27,15 @@
     </div>
 
     <div class="position-relative">
-        <img src="{{asset('img/palms-bg.webp')}}" alt="" class="w-100 position-absolute top-0 start-0 z-1" style="mix-blend-mode: multiply;">
+        <img src="{{asset('img/palms-bg.webp')}}" alt="" class="w-100 position-absolute top-0 start-0 z-2" style="mix-blend-mode: multiply;">
         
-        <h1 class="text-center mb-5">{{__('Nuestros Desarrollos')}}</h1>
+        <h1 class="text-center mb-6 fs-1"><i class="fa-solid fa-tree-city"></i> {{__('Nuestros Desarrollos')}}</h1>
 
-        <div class="container row justify-content-center position-relative z-2 text-center">
+        <div class="container row justify-content-center position-relative z-2 text-center mb-6">
+
+            <div class="col-12 text-center mb-5">
+                <h2 class="fw-light">Jalisco</h2>
+            </div>
 
             <div class="col-12 col-lg-3 mb-5">
                 <h2 class="fs-3">Main Street Valle Real</h2>
@@ -55,13 +59,6 @@
             </div>
 
             <div class="col-12 col-lg-3 mb-5">
-                <h2 class="fs-3">Libu</h2>
-                <p class="fs-5">
-                    2022 - {{__('Entrega')}} 2024, Bucerías, Nayarit.
-                </p>
-            </div>
-
-            <div class="col-12 col-lg-3 mb-5">
                 <h3>Garibaldi</h3>
                 <p class="fs-5">{{__('32 Departamentos y 6 oficinas.')}}</p>
             </div>
@@ -72,6 +69,29 @@
             </div>
 
             <div class="col-12 col-lg-3 mb-5">
+                <h3>Plenitud Select</h3>
+                <p class="fs-5">{{__('56 departamentos.')}}</p>
+            </div>
+
+            <div class="col-12 col-lg-3 mb-5">
+                <h3>Plenitud Valle Real</h3>
+                <p class="fs-5">{{__('56 departamentos.')}}</p>
+            </div>
+
+            <div class="col-12 col-lg-3 mb-5">
+                <h3>Plenitud Quinta Real</h3>
+                <p class="fs-5">{{__('39 Departamentos, Oficinas, comercial')}}</p>
+            </div>
+
+        </div>
+
+        <div class="container row justify-content-center z-2 position-relative text-center">
+
+            <div class="col-12 text-center mb-5">
+                <h2 class="fw-light">Riviera Nayarit</h2>
+            </div>
+
+            <div class="col-12 col-lg-3 mb-5">
                 <h3>Makare</h3>
                 <p class="fs-5">20 {{__('Apartamentos')}}, Bucerías, Nayarit.</p>
             </div>
@@ -79,6 +99,13 @@
             <div class="col-12 col-lg-3 mb-5">
                 <h3>Arenka</h3>
                 <p class="fs-5">12 {{__('Apartamentos')}}, Bucerías, Nayarit.</p>
+            </div>
+
+            <div class="col-12 col-lg-3 mb-5">
+                <h2 class="fs-3">Libu</h2>
+                <p class="fs-5">
+                    2022 - {{__('Entrega')}} 2024, Bucerías, Nayarit.
+                </p>
             </div>
 
         </div>

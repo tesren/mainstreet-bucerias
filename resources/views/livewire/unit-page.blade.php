@@ -95,30 +95,33 @@
     
                 </div>
     
-                <h2 class="fs-3 mb-4 mb-lg-2">{{__('Dimensiones')}}</h2>
-                <div class="row fs-5 fw-normal">
-    
-                    <div class="col-12 col-lg-4 mb-3">
-                        <i class="fa-solid fa-ruler-combined"></i> {{__('Interior')}}: {{$unit->interior_const}}m²
-                    </div>
-    
-                    @if ($unit->exterior_const > 0)
+                @if ($unit->total_const != 0)
+                    <h2 class="fs-3 mb-4 mb-lg-2">{{__('Dimensiones')}}</h2>
+                    <div class="row fs-5 fw-normal">
+        
                         <div class="col-12 col-lg-4 mb-3">
-                            <i class="fa-solid fa-expand"></i> {{__('Exterior')}}: {{$unit->exterior_const}}m²
+                            <i class="fa-solid fa-ruler-combined"></i> {{__('Interior')}}: {{$unit->interior_const}}m²
                         </div>
-                    @endif
-    
-                    <div class="col-12 col-lg-4 mb-3">
-                        <i class="fa-solid fa-house-chimney"></i> {{__('Total')}}: {{$unit->total_const}}m²
+        
+                        @if ($unit->exterior_const > 0)
+                            <div class="col-12 col-lg-4 mb-3">
+                                <i class="fa-solid fa-expand"></i> {{__('Exterior')}}: {{$unit->exterior_const}}m²
+                            </div>
+                        @endif
+        
+                        <div class="col-12 col-lg-4 mb-3">
+                            <i class="fa-solid fa-house-chimney"></i> {{__('Total')}}: {{$unit->total_const}}m²
+                        </div>
+        
                     </div>
-    
-                </div>
+                @endif
+                
             </div>
         </div>
 
         <div class="col-12 col-lg-4 text-center align-self-center">
 
-            @if ($unit->status != 'Vendida')
+            @if ($unit->status != 'Vendida' and $unit->price != 0)
                 <div class="badge {{$status_class}} rounded-pill fw-normal fs-5 mb-2">
                     {{__($unit->status)}}
                 </div>
@@ -127,15 +130,27 @@
                     ${{ number_format($unit->price, 2) }} {{$unit->currency}}
                 </div>
 
-                <a href="https://wa.me/523221805380?text={{ urlencode(__('Hola, vengo del sitio web de Main Street Bucerías')) }}" target="_blank" rel="noreferrer noopener" class="btn btn-brown">{{__('¿Necesitas más información?')}}</a>
-            
+                <a href="https://wa.me/523221805380?text={{ urlencode(__('Hola, vengo del sitio web de Main Street Bucerías')) }}" target="_blank" rel="noreferrer noopener" class="btn btn-green">{{__('¿Necesitas más información?')}}</a>
+
+            @elseif($unit->status == 'Disponible' and $unit->price == 0 )
+
+                <div class="badge {{$status_class}} rounded-pill fw-normal fs-5 mb-2">
+                    {{__($unit->status)}}
+                </div>
+
+                <div class="fs-3 fw-regular mb-3">
+                    {{__('¿Te interesa esta Unidad? Da clic en el siguiente botón para más información')}}
+                </div>
+
+                <a href="https://wa.me/523221805380?text={{ urlencode(__('Hola, vengo del sitio web de Main Street Bucerías')) }}" target="_blank" rel="noreferrer noopener" class="btn btn-green shadow">{{__('Más información')}}</a>
+
             @else
                 <div class="text-center">
                     <div class="badge {{$status_class}} rounded-pill fw-normal fs-4 mb-2">
                         {{__('Unidad')}} {{__($unit->status)}}
                     </div>
     
-                    <a href="https://wa.me/523221805380?text={{ urlencode(__('Hola, vengo del sitio web de Main Street Bucerías')) }}" target="_blank" rel="noreferrer noopener" class="btn btn-brown d-block w-50 mx-auto">{{__('¿Necesitas algo similar?')}}</a>
+                    <a href="https://wa.me/523221805380?text={{ urlencode(__('Hola, vengo del sitio web de Main Street Bucerías')) }}" target="_blank" rel="noreferrer noopener" class="btn btn-green d-block w-50 mx-auto">{{__('¿Necesitas algo similar?')}}</a>
     
                 </div>            
             @endif
@@ -146,7 +161,7 @@
     </div>
 
     
-    <div class="row justify-content-evenly mb-6">
+    <div class="row justify-content-evenly mb-6 position-relative z-2">
 
         {{-- Planos --}}
         <div class="col-12 col-lg-5 mb-5 mb-lg-0 align-self-center">
@@ -161,89 +176,92 @@
         </div>
 
         {{-- Planes de pago --}}
-        <div class="col-12 col-lg-4 text-center align-self-center">
+        @if ($unit->status != 'Vendida' and $unit->floor != 3)
+            
+            <div class="col-12 col-lg-4 text-center align-self-center">
 
-            <div class="row">
+                <div class="row">
 
-                <div class="col-12 col-lg-11 order-2 order-lg-1 px-0">
-                    <div class="tab-content" id="myTabContent">
-                        @php $j = 1; @endphp
-                        @foreach ( $unit->paymentPlans as $plan )
+                    <div class="col-12 col-lg-11 order-2 order-lg-1 px-0">
+                        <div class="tab-content" id="myTabContent">
+                            @php $j = 1; @endphp
+                            @foreach ( $unit->paymentPlans as $plan )
 
-                            <div class="tab-pane bg-light shadow p-4 p-lg-5 fade @if($j==1) show active @endif" id="tab-pane-{{$plan->id}}" role="tabpanel" aria-labelledby="plan-tab-{{$plan->id}}" tabindex="0">
-                                <h3 class="fs-2 fw-bold">{{__('Esquema')}}</h3>
-                                <div class="mb-4">{{__('Descuento del')}} {{$plan->discount}}%</div>
+                                <div class="tab-pane bg-light text-success shadow p-4 p-lg-5 fade @if($j==1) show active @endif" id="tab-pane-{{$plan->id}}" role="tabpanel" aria-labelledby="plan-tab-{{$plan->id}}" tabindex="0">
+                                    <h3 class="fs-2 fw-bold">{{__('Esquema')}}</h3>
+                                    <div class="mb-4">{{__('Descuento del')}} {{$plan->discount}}%</div>
 
-                               @php
-                                   $discounted_price = $unit->price * ((100 - $plan->discount)/100 );
-                                   $down_payment = $discounted_price * ( $plan->down_payment/100 );
-                                   $months_total = $discounted_price * ( $plan->months_percent/100 );
-                                   $final_payment = $discounted_price * ( $plan->closing_payment/100 );
-                               @endphp 
+                                @php
+                                    $discounted_price = $unit->price * ((100 - $plan->discount)/100 );
+                                    $down_payment = $discounted_price * ( $plan->down_payment/100 );
+                                    $months_total = $discounted_price * ( $plan->months_percent/100 );
+                                    $final_payment = $discounted_price * ( $plan->closing_payment/100 );
+                                @endphp 
 
-                                <table class="table table-striped mb-4">
-                                    
-                                    <tbody>
+                                    <table class="table table-striped mb-4">
+                                        
+                                        <tbody>
 
-                                      <tr>
-                                        <td>{{__('Precio de Lista')}}</td>
-                                        <td class="text-decoration-line-through">${{ number_format($unit->price, 2) }} {{$unit->currency}}</td>
-                                      </tr>
+                                        <tr>
+                                            <td>{{__('Precio de Lista')}}</td>
+                                            <td class="text-decoration-line-through">${{ number_format($unit->price, 2) }} {{$unit->currency}}</td>
+                                        </tr>
 
-                                      <tr>
-                                        <td>{{__('Precio con :discount% de descuento', ['discount'=>$plan->discount] )}}</td>
-                                        <td>${{ number_format($discounted_price, 2) }} {{$unit->currency}}</td>
-                                      </tr>
+                                        <tr>
+                                            <td>{{__('Precio con :discount% de descuento', ['discount'=>$plan->discount] )}}</td>
+                                            <td>${{ number_format($discounted_price, 2) }} {{$unit->currency}}</td>
+                                        </tr>
 
-                                      <tr>
-                                        <td>{{$plan->down_payment }}% {{__('de enganche a 6 pagos')}}</td>
-                                        <td>${{ number_format($down_payment, 2) }} {{$unit->currency}}</td>
-                                      </tr>
+                                        <tr>
+                                            <td>{{$plan->down_payment }}% {{__('de enganche a 6 pagos')}}</td>
+                                            <td>${{ number_format($down_payment, 2) }} {{$unit->currency}}</td>
+                                        </tr>
 
-                                      <tr>
-                                        <td>{{__(':percent% en :amount mensualidades', ['percent'=>$plan->months_percent, 'amount'=>$plan->months_amount ] )}}</td>
-                                        <td>${{ number_format($months_total, 2) }} {{$unit->currency}}</td>
-                                      </tr>
+                                        <tr>
+                                            <td>{{__(':percent% en :amount mensualidades', ['percent'=>$plan->months_percent, 'amount'=>$plan->months_amount ] )}}</td>
+                                            <td>${{ number_format($months_total, 2) }} {{$unit->currency}}</td>
+                                        </tr>
 
-                                      <tr>
-                                        <td>{{$plan->closing_payment }}% {{__('de pago final')}}</td>
-                                        <td>${{ number_format($final_payment, 2) }} {{$unit->currency}}</td>
-                                      </tr>
-                                      
-                                    </tbody>
-                                </table>
+                                        <tr>
+                                            <td>{{$plan->closing_payment }}% {{__('de pago final')}}</td>
+                                            <td>${{ number_format($final_payment, 2) }} {{$unit->currency}}</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
 
-                                <a href="https://wa.me/523221805380?text={{ urlencode(__('Hola, vengo del sitio web de Main Street Bucerías')) }}" target="_blank" rel="noreferrer noopener" class="btn btn-brown fs-5 px-5">{{__('Agenda una cita')}}</a>
+                                    <a href="https://wa.me/523221805380?text={{ urlencode(__('Hola, vengo del sitio web de Main Street Bucerías')) }}" target="_blank" rel="noreferrer noopener" class="btn btn-green fs-5 px-5">{{__('Agenda una cita')}}</a>
 
-                            </div>
-        
-                            @php $j++; @endphp
-                        @endforeach
-        
+                                </div>
+            
+                                @php $j++; @endphp
+                            @endforeach
+            
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-lg-1 order-1 order-lg-2 px-0">
-                    <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+                    <div class="col-12 col-lg-1 order-1 order-lg-2 px-0">
+                        <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
 
-                        @php $i = 1; @endphp
-                        @foreach ($unit->paymentPlans as $plan)
+                            @php $i = 1; @endphp
+                            @foreach ($unit->paymentPlans as $plan)
 
-                            <li class="nav-item mb-0 mb-lg-3 me-2 me-lg-0" role="presentation">
-                                <button class="nav-link @if($i==1) active @endif" id="plan-tab-{{$plan->id}}" data-bs-toggle="tab" data-bs-target="#tab-pane-{{$plan->id}}" type="button" role="tab" aria-controls="tab-pane-{{$plan->id}}" @if($i==1) aria-selected="true" @endif>
-                                    {{$plan->name}}
-                                </button>
-                            </li>
+                                <li class="nav-item mb-0 mb-lg-3 me-2 me-lg-0" role="presentation">
+                                    <button class="nav-link @if($i==1) active @endif" id="plan-tab-{{$plan->id}}" data-bs-toggle="tab" data-bs-target="#tab-pane-{{$plan->id}}" type="button" role="tab" aria-controls="tab-pane-{{$plan->id}}" @if($i==1) aria-selected="true" @endif>
+                                        {{$plan->name}}
+                                    </button>
+                                </li>
 
-                            @php $i++; @endphp
-                        @endforeach
-                        
-                    </ul>
+                                @php $i++; @endphp
+                            @endforeach
+                            
+                        </ul>
+                    </div>
+
                 </div>
 
             </div>
-
-        </div>
+        @endif
 
     </div>
 

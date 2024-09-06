@@ -182,7 +182,7 @@ class Unit extends Resource
                 ['lockoff'],
                 function (Image $field, NovaRequest $request, FormData $formData) {
                     if ($formData->lockoff == true) {
-                        $field->show()->rules('required');
+                        $field->show()->creationRules('required');
                     }
                     else{
                         $field->hide();

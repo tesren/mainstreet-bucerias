@@ -35,17 +35,17 @@
                 <div class="col-12 col-lg-5">
                     <h1>{{__('Búsqueda de Condominios')}}</h1>
                     <p>{{__('Busca de forma más práctica por medio de nuestro formulario y nuestra tabla.')}}</p>
-                    <div class="d-flex mb-4">
-                        <div class="me-3">
-                            <span class="px-2 py-1 bg-success text-success rounded-2">D</span> {{__('Disponible')}}
+                    <div class="d-flex mb-5 fs-5">
+                        <div class="me-3 me-lg-4">
+                            <i class="fa-solid text-success fa-square"></i> {{__('Disponible')}}
                         </div>
-
-                        <div class="me-3">
-                            <span class="px-2 py-1 bg-warning text-warning rounded-2">A</span> {{__('Apartado')}}
+        
+                        <div class="me-3 me-lg-4">
+                            <i class="fa-solid text-warning fa-square"></i> {{__('Apartado')}}
                         </div>
-
+        
                         <div>
-                            <span class="px-2 py-1 bg-danger text-danger rounded-2">V</span> {{__('Vendido')}}
+                            <i class="fa-solid text-danger fa-square"></i> {{__('Vendido')}}
                         </div>
                     </div>
                 </div>
@@ -53,9 +53,9 @@
                 <div class="col-12 col-lg-5 align-self-center">
                     <div class="mb-3 fs-5">{{__('Selecciona el estilo de inventario que te gustaría ver')}}</div>
 
-                    <a href="{{route('inventory')}}" class="btn btn-outline-brown me-3" wire:navigate><i class="fa-solid fa-image"></i> {{__('Gráfico')}}</a>
+                    <a href="{{route('inventory')}}" class="btn btn-outline-light me-3" wire:navigate><i class="fa-solid fa-image"></i> {{__('Gráfico')}}</a>
 
-                    <a href="{{route('search')}}" class="btn btn-outline-brown" wire:navigate><i class="fa-solid fa-list"></i> {{__('Lista')}}</a>
+                    <a href="{{route('search')}}" class="btn btn-outline-light" wire:navigate><i class="fa-solid fa-list"></i> {{__('Lista')}}</a>
                 </div>
 
             </div>
@@ -132,7 +132,7 @@
                             </div>
                             
             
-                            <button type="submit" class="btn btn-brown rounded-end-2 col-12 col-lg-1" aria-label="{{__('Buscar')}}">
+                            <button type="submit" class="btn btn-green rounded-end-2 col-12 col-lg-1" aria-label="{{__('Buscar')}}">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </div>
@@ -194,7 +194,7 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="{{ route('unit', ['name'=>$unit->name]) }}" class="btn btn-brown" target="_blank" rel="noopener noreferrer">
+                                            <a href="{{ route('unit', ['name'=>$unit->name]) }}" class="btn btn-green" target="_blank" rel="noopener noreferrer">
                                                 {{__('Ver más')}}
                                             </a>
                                         </td>

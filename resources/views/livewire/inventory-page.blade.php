@@ -7,7 +7,7 @@
 
 
     {{-- Inicio --}}
-    <div class="position-relative mb-4">
+    <div class="position-relative mb-6">
         <img src="{{asset('img/downhouse-interior.webp')}}" alt="Main Street Bucerías" class="w-100 object-fit-cover" style="height: 30vh;">
 
         <div class="fondo-oscuro"></div>
@@ -26,18 +26,22 @@
 
     </div>
 
-    <div class="row justify-content-evenly position-relative">
+    <div class="row justify-content-evenly position-relative z-2">
 
-        <img src="{{asset('img/palms-bg.webp')}}" alt="" class="w-100 position-absolute top-0 start-0 z-1">
+        <img src="{{asset('/img/palms-decoration-left.webp')}}" class="position-absolute top-0 start-0 px-0 z-2 d-none d-lg-block" style="width: 250px;" alt="" loading="lazy">
+        <img src="{{asset('/img/palms-decoration-right.webp')}}" class="position-absolute top-0 end-0 px-0 z-2 d-none d-lg-block" style="width: 200px;" alt="" loading="lazy">
+        <img src="{{asset('/img/palms-decoration-bottom.webp')}}" class="position-absolute bottom-0 end-0 px-0 z-2 d-none d-lg-block" style="width: 200px;" alt="" loading="lazy">
+
+        <img src="{{asset('img/palms-bg.webp')}}" alt="" class="w-100 position-absolute top-0 start-0 z-1 d-block d-lg-none px-0">
 
         {{-- Vistas --}}
-        <div class="col-12 col-lg-7 px-0 position-relative z-2 order-2 order-lg-1">
+        <div class="col-12 col-lg-5 px-0 position-relative z-2 order-2 order-lg-1 mb-5 mb-lg-0">
 
             <div class="tab-content" id="pills-tabContent">
 
                 <div class="tab-pane fade show active" id="pills-oceanview" role="tabpanel" aria-labelledby="pills-oceanview-tab" tabindex="0">
                     <div class="position-relative">
-                        <img src="{{asset('img/inventory-ocean.webp')}}" alt="Fachada con vista al mar - Main Street Bucerías" class="w-100">
+                        <img src="{{asset('img/inventory-ocean.webp')}}" alt="Fachada con vista al mar - Main Street Bucerías" class="w-100 shadow">
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="position-absolute start-0 top-0 px-0 h-100" viewBox="0 0 1200 1200">
 
                             @foreach ($oceanview_units as $unit)
@@ -60,7 +64,7 @@
                 
                 <div class="tab-pane fade" id="pills-streetview" role="tabpanel" aria-labelledby="pills-streetview-tab" tabindex="0">
                     <div class="position-relative">
-                        <img src="{{asset('img/inventory-street.webp')}}" alt="Fachada con vista a la calle - Main Street Bucerías" class="w-100">
+                        <img src="{{asset('img/inventory-street.webp')}}" alt="Fachada con vista a la calle - Main Street Bucerías" class="w-100 shadow">
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="position-absolute start-0 top-0 px-0 h-100" viewBox="0 0 1200 1200">
 
                             @foreach ($streetview_units as $unit)
@@ -88,49 +92,43 @@
 
         <div class="col-12 col-lg-5 align-self-center position-relative z-2 order-1 order-lg-2">
 
-            <div class="text-center text-lg-start d-none d-lg-block">
-                @if (app()->getLocale() == 'en')
-                    <img class="w-75 mb-5" src="{{asset('img/inventory-brown.webp')}}" alt="{{__('Inventory, take a look at our units')}}">
-                @else
-                    <img class="w-75 mb-5" src="{{asset('img/inventario-cafe.webp')}}" alt="{{__('Inventario, mira nuestras unidades')}}">  
-                @endif
-            </div>
-
-            <h1 class="fs-2">{{__('Elige la vista que más te guste')}}</h1>
-            <p class="fs-5 mb-4">{{__('Da clic en una unidad para ver más detalles')}}</p>
+            <h1 class="fs-1">{{__('Elige la vista que más te guste')}}</h1>
+            <p class="fs-5 fw-light mb-4">{{__('Da clic en una unidad para ver más detalles')}}</p>
 
             <div class="d-flex mb-5 fs-5">
                 <div class="me-3 me-lg-4">
-                    <span class="px-2 py-1 bg-success text-success rounded-2">D</span> {{__('Disponible')}}
+                    <i class="fa-solid text-success fa-square"></i> {{__('Disponible')}}
                 </div>
 
                 <div class="me-3 me-lg-4">
-                    <span class="px-2 py-1 bg-warning text-warning rounded-2">A</span> {{__('Apartado')}}
+                    <i class="fa-solid text-warning fa-square"></i> {{__('Apartado')}}
                 </div>
 
                 <div>
-                    <span class="px-2 py-1 bg-danger text-danger rounded-2">V</span> {{__('Vendido')}}
+                    <i class="fa-solid text-danger fa-square"></i> {{__('Vendido')}}
                 </div>
             </div>
 
             {{-- Navegción entre pestañas --}}
             <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
 
-                <li class="nav-item me-3" role="presentation">
-                    <button class="nav-link active px-5" id="pills-oceanview-tab" data-bs-toggle="pill" data-bs-target="#pills-oceanview" type="button" role="tab" aria-controls="pills-oceanview" aria-selected="true">{{__('Vista a la Playa')}}</button>
+                <li class="nav-item me-2 me-lg-3" role="presentation">
+                    <button class="nav-link active px-4 px-lg-5" id="pills-oceanview-tab" data-bs-toggle="pill" data-bs-target="#pills-oceanview" type="button" role="tab" aria-controls="pills-oceanview" aria-selected="true">{{__('Vista a la Playa')}}</button>
                 </li>
 
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link px-5" id="pills-streetview-tab" data-bs-toggle="pill" data-bs-target="#pills-streetview" type="button" role="tab" aria-controls="pills-streetview" aria-selected="false">{{__('Vista Frontal')}}</button>
+                    <button class="nav-link px-4 px-lg-5" id="pills-streetview-tab" data-bs-toggle="pill" data-bs-target="#pills-streetview" type="button" role="tab" aria-controls="pills-streetview" aria-selected="false">{{__('Vista Frontal')}}</button>
                 </li>
                 
             </ul>
 
 
             {{-- Tipo de inventario --}}
-            <h2 class="fs-4 mb-4">{{__('Selecciona el estilo de inventario que te gustaría ver')}}</h2>
-            <a href="{{route('inventory')}}" class="btn btn-outline-brown me-3 px-4 px-lg-5 fs-5" wire:navigate><i class="fa-solid fa-image"></i> {{__('Gráfico')}}</a>
-            <a href="{{route('search')}}" class="btn btn-outline-brown px-4 px-lg-5 fs-5" wire:navigate><i class="fa-solid fa-list"></i> {{__('Lista')}}</a>
+            <div class="mb-5">
+                <h2 class="fs-4 mb-4">{{__('Selecciona el estilo de inventario que te gustaría ver')}}</h2>
+                <a href="{{route('inventory')}}" class="btn btn-outline-light me-3 px-4 px-lg-5 fs-5" wire:navigate><i class="fa-solid fa-image"></i> {{__('Gráfico')}}</a>
+                <a href="{{route('search')}}" class="btn btn-outline-light px-4 px-lg-5 fs-5" wire:navigate><i class="fa-solid fa-list"></i> {{__('Lista')}}</a>
+            </div>
 
         </div>
 
@@ -141,7 +139,7 @@
 
         {{-- Modal --}}
         <div class="modal fade" id="unit-{{$unit->id}}" tabindex="-1" aria-labelledby="unit-{{$unit->id}}Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content bg-brown">
 
                     <div class="modal-header">
@@ -168,15 +166,21 @@
                                 <i class="fa-solid fa-bath"></i> {{$unit->bathrooms}}
                             </div>
                             
-                            <div class="me-3">
-                                <i class="fa-solid fa-house"></i> {{$unit->total_const}}m²
-                            </div>
+                            @if($unit->total_const != 0)
+                                <div class="me-3">
+                                    <i class="fa-solid fa-house"></i> {{$unit->total_const}}m²
+                                </div>
+                            @endif
+                            
                         </div>
 
                         @if ($unit->status != 'Vendida')
-                            <div class="fw-light fs-3">
-                                ${{ number_format($unit->price, 2) }} {{$unit->currency}}
-                            </div>
+
+                            @if ($unit->price != 0)
+                                <div class="fw-light fs-3">
+                                    ${{ number_format($unit->price, 2) }} {{$unit->currency}}
+                                </div>
+                            @endif
 
                             @if ($unit->lockoff)
                                 <div class="mb-3"><i class="fa-regular fa-circle-check"></i> {{__('Opción a Lockoff')}}</div>

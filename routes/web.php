@@ -43,3 +43,8 @@ Route::localized(function () {
     });
 
 });
+
+Route::get('/mainstreet-optimize', function() {
+    Artisan::call('optimize');
+    return ('Optimizado');
+});

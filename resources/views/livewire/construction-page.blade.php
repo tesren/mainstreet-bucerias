@@ -28,7 +28,7 @@
 
     @if ( isset($const_updates) )
     
-        <div class="row justify-content-center mb-6 position-relative">
+        <div class="row justify-content-center mb-6 position-relative z-2">
 
             <img src="{{asset('img/palms-bg.webp')}}" alt="" class="w-100 position-absolute top-0 start-0 z-1">
 
@@ -50,7 +50,7 @@
                         </div>
                     </div>
 
-                    <div class="card-body bg-darkbrown d-flex position-relative overflow-hidden">
+                    <div class="card-body bg-darkgreen d-flex position-relative overflow-hidden">
 
                         <img class="me-5 ms-4 align-self-center" src="{{asset('img/logo-simple-white.webp')}}" alt="Logo de Main Street Bucerías" width="60px">            
                         <h2 class="mb-0 lh-1 fw-light">{{$date}} <br> <span class="fs-5">{{__('Avance de Obra')}}</span> </h2>

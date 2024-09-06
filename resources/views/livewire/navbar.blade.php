@@ -1,6 +1,6 @@
 <div>
     {{-- Success is as dangerous as failure. --}}
-    <nav class="navbar bg-brown sticky-top shadow navbar-expand-xl py-0">
+    <nav class="navbar bg-darkgreen sticky-top shadow navbar-expand-xl py-0 navbar-dark">
         <div class="container-fluid position-relative py-2 overflow-hidden">
     
             <img src="{{asset('/img/palm-nav-bg.webp')}}" alt="" class="position-absolute top-0 start-0 z-1" style="mix-blend-mode: luminosity; opacity:0.1;">
@@ -15,14 +15,14 @@
     
             <div class="offcanvas offcanvas-end text-center" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     
-                <div class="offcanvas-header bg-brown">
+                <div class="offcanvas-header bg-darkgreen">
                     <div class="offcanvas-title" id="offcanvasNavbarLabel">
-                        <img src="{{asset('img/mainstreet-full-logo.webp')}}" alt="Logo de Main Street Bucerías" class="w-100 px-4">
+                        <img src="{{asset('img/logo-full-blanco.webp')}}" alt="Logo de Main Street Bucerías" class="w-100 px-4">
                     </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
     
-                <div class="offcanvas-body bg-brown">
+                <div class="offcanvas-body bg-darkgreen">
     
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
     
@@ -60,12 +60,12 @@
                         @if ($lang == 'en')
                             @if($route != 'en.unit' and $route != 'es.livewire.update')
     
-                                <a href="{{$url = route($route, request()->query(), true, 'es')}}" wire:navigate class="d-block align-self-center me-3 link-brown fs-4" title="{{__('Cambiar idioma')}}">
+                                <a href="{{$url = route($route, request()->query(), true, 'es')}}" wire:navigate class="d-block align-self-center me-3 link-light fs-4" title="{{__('Cambiar idioma')}}">
                                     <i class="fa-solid fa-language"></i>
                                 </a>
                             @else
     
-                                <a class="d-block align-self-center me-3 link-brown fs-4" title="{{__('Cambiar idioma')}}" wire:navigate href="{{$url = route('unit', ['name'=>$unit_name, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'es');}}">
+                                <a class="d-block align-self-center me-3 link-light fs-4" title="{{__('Cambiar idioma')}}" wire:navigate href="{{$url = route('unit', ['name'=>$unit_name, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'es');}}">
                                     <i class="fa-solid fa-language"></i>
                                 </a>
     
@@ -74,13 +74,13 @@
                         @else
                             @if($route != 'es.unit' and $route != 'es.livewire.update')
     
-                                <a href="{{$url = route($route, request()->query(), true, 'en')}}" wire:navigate class="d-block align-self-center me-3 link-brown fs-4" title="{{__('Cambiar idioma')}}">
+                                <a href="{{$url = route($route, request()->query(), true, 'en')}}" wire:navigate class="d-block align-self-center me-3 link-light fs-4" title="{{__('Cambiar idioma')}}">
                                     <i class="fa-solid fa-language"></i>
                                 </a>
     
                             @else
                                 
-                                <a class="d-block align-self-center me-3 link-brown fs-4" title="{{__('Cambiar idioma')}}" wire:navigate href="{{$url = route('unit', ['name'=>$unit_name, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'en');}}">
+                                <a class="d-block align-self-center me-3 link-light fs-4" title="{{__('Cambiar idioma')}}" wire:navigate href="{{$url = route('unit', ['name'=>$unit_name, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'en');}}">
                                     <i class="fa-solid fa-language"></i>
                                 </a>
     
