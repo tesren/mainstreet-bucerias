@@ -2,7 +2,6 @@
 @import url('all.min.css');
 @import "@fancyapps/ui/dist/fancybox/fancybox.css";
 @import 'aos/dist/aos.css';
-@import url('https://fonts.cdnfonts.com/css/andika-new-basic');
 
 :root{
     --darkgreen: #03544D;
@@ -13,7 +12,7 @@
 }
 
 body{
-    font-family: 'Andika New Basic', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: white;
     background-color: var(--green);
     overflow-x: hidden !important;
@@ -237,6 +236,13 @@ body{
 .vendida-class:hover{
     fill: rgba(220, 53, 69, 1);
     transition: 0.2s;
+}
+
+.btn-light {
+    --bs-btn-color: var(--darkgreen);
+    --bs-btn-hover-color: var(--darkgreen);
+    --bs-btn-active-color: var(--darkgreen);
+    --bs-btn-disabled-color: var(--darkgreen);
 }
 
 @media (max-width: 992px) {

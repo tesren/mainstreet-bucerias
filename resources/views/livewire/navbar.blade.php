@@ -51,7 +51,12 @@
                         <li class="nav-item me-0 me-lg-4">
                             <a class="nav-link" href="{{route('about')}}" wire:navigate>{{__('Nosotros')}}</a>
                         </li>
+                        
     
+                        <li class="nav-item me-0 me-lg-4 mb-3 mb-lg-0">
+                            <a class="btn btn-light" href="http://matchmakerpublicalb-1286503868.us-east-2.elb.amazonaws.com:90/?inventoryid=6690c3f14173acc240f3bf20" target="_blank" rel="noopener noreferrer">{{__('Tour virtual')}}</a>
+                        </li>
+
                         @php
                             $route = Route::currentRouteName();
                             $lang = app()->getLocale();
@@ -60,12 +65,12 @@
                         @if ($lang == 'en')
                             @if($route != 'en.unit' and $route != 'es.livewire.update')
     
-                                <a href="{{$url = route($route, request()->query(), true, 'es')}}" wire:navigate class="d-block align-self-center me-3 link-light fs-4" title="{{__('Cambiar idioma')}}">
+                                <a href="{{$url = route($route, request()->query(), true, 'es')}}" wire:navigate class="d-block align-self-center me-0 me-lg-3 link-light fs-4" title="{{__('Cambiar idioma')}}">
                                     <i class="fa-solid fa-language"></i>
                                 </a>
                             @else
     
-                                <a class="d-block align-self-center me-3 link-light fs-4" title="{{__('Cambiar idioma')}}" wire:navigate href="{{$url = route('unit', ['name'=>$unit_name, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'es');}}">
+                                <a class="d-block align-self-center me-0 me-lg-3 link-light fs-4" title="{{__('Cambiar idioma')}}" wire:navigate href="{{$url = route('unit', ['name'=>$unit_name, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'es');}}">
                                     <i class="fa-solid fa-language"></i>
                                 </a>
     
@@ -74,13 +79,13 @@
                         @else
                             @if($route != 'es.unit' and $route != 'es.livewire.update')
     
-                                <a href="{{$url = route($route, request()->query(), true, 'en')}}" wire:navigate class="d-block align-self-center me-3 link-light fs-4" title="{{__('Cambiar idioma')}}">
+                                <a href="{{$url = route($route, request()->query(), true, 'en')}}" wire:navigate class="d-block align-self-center me-0 me-lg-3 link-light fs-4" title="{{__('Cambiar idioma')}}">
                                     <i class="fa-solid fa-language"></i>
                                 </a>
     
                             @else
                                 
-                                <a class="d-block align-self-center me-3 link-light fs-4" title="{{__('Cambiar idioma')}}" wire:navigate href="{{$url = route('unit', ['name'=>$unit_name, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'en');}}">
+                                <a class="d-block align-self-center me-0 me-lg-3 link-light fs-4" title="{{__('Cambiar idioma')}}" wire:navigate href="{{$url = route('unit', ['name'=>$unit_name, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'en');}}">
                                     <i class="fa-solid fa-language"></i>
                                 </a>
     

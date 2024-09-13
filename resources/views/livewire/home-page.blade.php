@@ -32,7 +32,7 @@
     {{-- Info general --}}
     <div class="row justify-content-center justify-content-lg-start mb-6 pt-5 position-relative" id="info">
 
-        <div class="col-12 col-lg-5 mb-5 mb-lg-0 px-0" data-aos="fade-right">
+        <div class="col-12 col-lg-5 mb-5 mb-lg-0 px-0" data-aos="fade-down">
 
             <div id="carouselExample" class="carousel slide">
 
@@ -60,7 +60,7 @@
 
         </div>
 
-        <div class="col-12 col-lg-7 align-self-center position-relative z-3" data-aos="fade-left">
+        <div class="col-12 col-lg-7 align-self-center position-relative z-3" data-aos="fade-up">
 
             <div class="row justify-content-center">
 
@@ -91,7 +91,8 @@
                         </li>
                     </ul>
 
-                    <a href="{{route('inventory')}}" wire:navigate class="btn btn-green w-100">{{__('Ver inventario disponible')}}</a>
+                    <a href="{{route('inventory')}}" wire:navigate class="btn btn-green w-100 mb-3">{{__('Ver inventario disponible')}}</a>
+                    <a class="btn btn-outline-light w-100" href="http://matchmakerpublicalb-1286503868.us-east-2.elb.amazonaws.com:90/?inventoryid=6690c3f14173acc240f3bf20" target="_blank" rel="noopener noreferrer">{{__('Ver recorrido virtual')}}</a>
                 </div>
 
             </div>

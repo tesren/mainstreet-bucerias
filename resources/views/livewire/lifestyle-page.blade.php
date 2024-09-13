@@ -60,7 +60,7 @@
         </div>
 
         {{-- Playas relajantes --}}
-        <div class="row px-0 mb-6">
+        <div class="row px-0 mb-6 position-relative z-2">
 
             <div class="col-12 col-lg-7 ps-2 ps-lg-0 mb-4 mb-lg-0">
 
@@ -72,7 +72,7 @@
                         <img src="{{asset('/img/beach-3.jpg')}}" alt="Playa Bucerías" class="w-100 shadow" data-fancybox="beach">
                     </div>
                     <div class="col-12 col-lg-6 p-1 d-none d-lg-block">
-                        <img src="{{asset('/img/beach-4.jpg')}}" alt="Playa Bucerías" class="w-100 shadow" data-fancybox="beach">
+                        <img src="{{asset('/img/beach-4.jpg')}}" alt="Playa Bucerías" class="w-100 shadow object-fit-cover" data-fancybox="beach" style="height: 211px;">
                     </div>
                     <div class="col-12 col-lg-6 p-0">
                         <div class="row">
@@ -113,7 +113,7 @@
                         <img src="{{asset('/img/sports-4.jpg')}}" alt="Deportes acuáticos Bucerías" class="w-100 shadow" data-fancybox="sports" loading="lazy">
                     </div>
                     <div class="col-12 col-lg-6 p-1 d-none d-lg-block">
-                        <img src="{{asset('/img/sports-2.jpg')}}" alt="Deportes acuáticos Bucerías" class="w-100 shadow" data-fancybox="sports" loading="lazy">
+                        <img src="{{asset('/img/sports-2.jpg')}}" alt="Deportes acuáticos Bucerías" class="w-100 shadow object-fit-cover" data-fancybox="sports" loading="lazy" style="height: 211px;">
                     </div>
                     <div class="col-12 col-lg-6 p-0">
                         <div class="row">
@@ -144,7 +144,7 @@
                         <img src="{{asset('/img/food-2.jpg')}}" alt="Gastronomía de Bucerías" class="w-100 shadow" data-fancybox="food" loading="lazy">
                     </div>
                     <div class="col-12 col-lg-6 p-1 d-none d-lg-block">
-                        <img src="{{asset('/img/food-3.jpg')}}" alt="Gastronomía de Bucerías" class="w-100 shadow" data-fancybox="food" loading="lazy">
+                        <img src="{{asset('/img/food-3.jpg')}}" alt="Gastronomía de Bucerías" class="w-100 shadow object-fit-cover" data-fancybox="food" loading="lazy" style="height: 211px;">
                     </div>
 
                     <div class="col-12 col-lg-6 p-0">
@@ -187,8 +187,8 @@
 
         <div class="row">
             <div class="col-12 col-lg-5 p-0">
-                <img src="{{asset('img/shrimp.jpg')}}" alt="Gastronomía Variada" class="w-100 object-fit-cover p-1" data-fancybox="gallery" loading="lazy">
-                <img src="{{asset('img/boats-ocean.jpg')}}" alt="Yates y pangas" class="w-100 object-fit-cover p-1" data-fancybox="gallery" loading="lazy">
+                <img src="{{asset('img/shrimp.jpg')}}" alt="Gastronomía Variada" class="w-100 object-fit-cover p-1" data-fancybox="gallery" loading="lazy" style="height: 295px;">
+                <img src="{{asset('img/boats-ocean.jpg')}}" alt="Yates y pangas" class="w-100 object-fit-cover p-1" data-fancybox="gallery" loading="lazy" style="height: 295px;">
             </div>
 
             <div class="col-12 col-lg-5 p-1 d-none d-lg-block">

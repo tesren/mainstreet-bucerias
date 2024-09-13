@@ -55,7 +55,7 @@
                     <div class="bg-darkgreen-low-opacity text-center h-100">3 min. <i class="fa-solid fa-person-walking"></i></div>
                 </div> 
                 <div class="col-4 px-0 d-none d-lg-block">
-                    <div class="bg-darkgreen-low-opacity text-center">2 min. <i class="fa-solid fa-person-biking"></i></div>
+                    <div class="bg-darkgreen-low-opacity text-center h-100">2 min. <i class="fa-solid fa-person-biking"></i></div>
                 </div>
             </div>
 
